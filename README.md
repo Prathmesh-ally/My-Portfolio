@@ -19,7 +19,7 @@ This portfolio features a unique **Gamified Skills Section** where skills are ca
 
 | Status | Technology |
 |:------:|------------|
-| ✅ **Unlocked (Mastered)** | HTML5, CSS3, JavaScript (ES6+), Bootstrap |
+| ✅ **Unlocked (Mastered)** | HTML5, CSS3, JavaScript (ES6+), **Git & GitHub** |
 | 🔒 **Locked (Learning)** | MongoDB, Express.js, React.js, Node.js (MERN Stack) |
 
 ---
