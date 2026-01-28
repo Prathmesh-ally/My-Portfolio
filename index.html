@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prathmesh Sanap | Portfolio</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="icon" href="./assets/Logo.png">
+</head>
+<body id="home">
+
+    <div class="main-container">
+
+        <nav class="navbar">
+            <div class="logo">My<span class="neon-text">Portfolio</span></div>
+            
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li> <li><a href="#projects">Projects</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero-section">
+
+            <div class="hero-text-content">
+                
+                <div class="hero-header-box">
+                    <h1>Prathmesh Sanap 
+                        <span class="subtitle auto-type"></span> </h1>
+                </div>
+                
+                <div class="hero-bio-box">
+                    <p class="bio-text">
+                        Aspiring Computer Engineering graduate, equipped with HTML5 mastery and CSS3 proficiency.
+                        Possesses strong problem-solving skills and a passion for technology, committed to driving
+                        professional growth and delivering impactful results in the field. A strategic focus on mastering
+                        the MERN stack (MongoDB, Express, React, Node.js) for end-to-end development.
+                    </p>
+                </div>
+
+                <div class="hero-links">
+                     <a href="./assets/Prathmesh-Sanap_CV.pdf" download class="cv-button">Download CV <i class="fa-solid fa-download"></i></a>
+                </div>
+
+            </div>
+            
+            <div class="hero-image-box">
+                <img src="./assets/Myimage.png" alt="Prathmesh Sanap" class="profile-photo">
+            </div>
+
+        </div>
+
+        <div class="skills-section" id="skills">
+            <h3>My Tech Stack</h3>
+            <div class="skills-icons">
+                <img src="./assets/html.png" alt="HTML">
+                <img src="./assets/css.png" alt="CSS">
+                <img src="./assets/js.png" alt="JS">
+                <img src="./assets/MongoDB.png" 
+                style="opacity: 0.3; filter: grayscale(100%); cursor: not-allowed;" 
+                title="Coming Soon (Learning in Progress)"
+                alt="MongoDB">
+                <img src="./assets/ExpresJs.png"
+                style="opacity: 0.3; filter: grayscale(100%); cursor: not-allowed;" 
+                title="Coming Soon (Learning in Progress)"
+                alt="ExpressJS">
+                <img src="./assets/React-Js.png"
+                style="opacity: 0.3; filter: grayscale(100%); cursor: not-allowed;" 
+                title="Coming Soon (Learning in Progress)"
+                alt="ReactJS">
+                <img src="./assets/Node-js.png" 
+                style="opacity: 0.3; filter: grayscale(100%); cursor: not-allowed;" 
+                title="Coming Soon (Learning in Progress)"
+                alt="NodeJS">
+            </div>
+        </div>
+
+        <div class="projects-section" id="projects">
+            <h2>Projects</h2>
+            
+            <div class="projects-container">
+
+                <div class="project-card">
+                    <h3>Personal Portfolio Website</h3>
+                    
+                    <p class="tech-stack">HTML • CSS • JavaScript</p>
+                    
+                    <p class="project-desc">
+                        Designed and developed this fully responsive personal portfolio with a 
+                        Neon Glassmorphism theme. Features smooth scrolling, contact form integration 
+                        (Web3Forms), and modern CSS animations.
+                    </p>
+                    
+                    <div style="margin-top: 15px;">
+                        <a href="https://github.com/tera-username/portfolio" target="_blank" class="btn-view">
+                            View Source Code <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                
+                <div class="project-card">
+                    <h3>Spotify Web Clone</h3>
+                    <p class="tech-stack"><strong>Tech Stack:</strong> HTML5, CSS3, Bootstrap</p>
+                    <p class="project-desc">
+                        Designed a responsive replica of the Spotify web interface using HTML5 and CSS3. 
+                        Utilized Bootstrap frameworks to ensure a consistent and mobile-friendly layout across different devices. 
+                        The project focuses on clean UI design to mimic the professional look of the original platform.
+                    </p>
+                    <a href="https://github.com/Prathmesh-ally/Spotify-clone-Using-Pure-CSS-.git" class="btn-view">View Code <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Premier Schools Exhibition Landing Page</h3>
+                    <p class="tech-stack"><strong>Tech Stack:</strong> HTML5, CSS3, Flexbox, Grid</p>
+                    <p class="project-desc">
+                        Developed a fully responsive event landing page using semantic HTML5 and custom CSS3. 
+                        Implemented high-performance, CSS-only infinite scroll animations for dynamic image galleries. 
+                        Designed a modern user interface featuring glassmorphism effects.
+                    </p>
+                    <a href="https://github.com/Prathmesh-ally/Assignment-By-SRV-MEDIA-.git" class="btn-view">View Code <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="contact-section" id="Contact">
+            <h2>Get In Touch</h2>
+            <div class="form-container">
+                <form action="https://api.web3forms.com/submit" method="POST">
+
+                    <input type="hidden" name="access_key" value="6205a65d-b7c1-4789-9490-1d8aaea57faa">
+
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+
+                </form>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-container">
+                <h3>Let's Connect</h3>
+                
+                <div class="footer-socials">
+                    <a href="https://github.com/Prathmesh-ally" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://linkedin.com/in/prathmesh-sanap-92325b322" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="mailto:prathmesh200515@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+
+                <p class="copyright">Designed & Built by Prathmesh Sanap | © 2026</p>
+            </div>
+        </footer>
+
+    </div>
+
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+        <script>
+            var typed = new Typed(".auto-type", {
+                strings: [
+                    "Aspiring MERN Stack Developer", 
+                    "Frontend Developer", 
+                    "Tech Enthusiast"
+                ],
+                typeSpeed: 100,
+                backSpeed: 60,   
+                loop: true       
+            });
+        </script>
+
+</body> 
+
+</body>
+</html>
