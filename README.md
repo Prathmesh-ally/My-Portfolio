@@ -1,6 +1,9 @@
 # ⚡ Prathmesh Sanap | Personal Portfolio
 
-![Portfolio Banner](https://via.placeholder.com/1000x400?text=Prathmesh+Sanap+Portfolio)
+<div align="center">
+  <img src="./assets/portfolio-banner.png" alt="Prathmesh Sanap Portfolio Banner" width="100%">
+</div>
+
 ## 🚀 Overview
 Welcome to my personal portfolio! This is a fully responsive website designed with a **Neon Glassmorphism** theme to showcase my journey as an **Aspiring Computer Engineering Graduate**. 
 
