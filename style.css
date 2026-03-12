@@ -44,7 +44,16 @@ a {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     z-index: 1000;
 }
+.blink-cursor {
+    color: #00f260;
+    text-shadow: 0 0 10px rgba(0, 242, 96, 0.8);
+    animation: blinkAnim 1s step-end infinite;
+}
 
+@keyframes blinkAnim {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
 .logo {
     font-size: 1.8rem;
     font-weight: 700;
@@ -440,3 +449,4 @@ form textarea:focus {
         padding: 20px;
     }
 }
+
