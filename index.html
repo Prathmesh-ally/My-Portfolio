@@ -10,7 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <link rel="icon" href="./assets/Logo.png">
@@ -18,7 +19,18 @@
 <body id="home">
 
     <div class="main-container">
-
+        <div id="preloader">
+            <div class="terminal-box">
+                    <div class="terminal-header">
+                        <span class="t-dot t-red"></span>
+                        <span class="t-dot t-yellow"></span>
+                        <span class="t-dot t-green"></span>
+                        <span class="t-title">bash - admin@prathmesh:~</span>
+                    </div>
+                <div id="preloader-text"></div>
+            </div>
+        </div>
+        <div class="scroll-progress-bar" id="scrollBar"></div>
         <nav class="navbar">
             <div class="logo">~$ <span class="neon-text">Prathmesh</span><span class="blink-cursor">_</span></div>
             
@@ -33,7 +45,7 @@
 
         <div class="hero-section">
 
-            <div class="hero-text-content">
+            <div class="hero-text-content" data-aos="fade-right">
                 
                 <div class="hero-header-box">
                     <h1>Prathmesh Sanap 
@@ -50,12 +62,12 @@
                 </div>
 
                 <div class="hero-links">
-                     <a href="./assets/Prathmesh-Sanap_CV.pdf" download class="cv-button">Download CV <i class="fa-solid fa-download"></i></a>
+                    <a href="./assets/Prathmesh-Sanap_CV.pdf" download class="cv-button">Download CV <i class="fa-solid fa-download"></i></a>
                 </div>
 
             </div>
             
-            <div class="hero-image-box">
+            <div class="hero-image-box" data-aos="fade-left">
                 <img src="./assets/Myimage.png" alt="Prathmesh Sanap" class="profile-photo">
             </div>
 
@@ -90,7 +102,7 @@
         <div class="experience-section" id="experience">
             <h2>Experience</h2>
             <div class="timeline"> 
-                <div class="timeline-item">
+                <div class="timeline-item" data-aos="fade-up">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <h3>.NET Intern</h3>
@@ -105,57 +117,71 @@
         </div>
 
         <div class="projects-section" id="projects">
-            <h2>Projects</h2>
-            
-            <div class="projects-container">
-
-                <div class="project-card">
-                    <h3>Personal Portfolio Website</h3>
-                    
-                    <p class="tech-stack">HTML • CSS • JavaScript</p>
-                    
-                    <p class="project-desc">
-                        Designed and developed this fully responsive personal portfolio with a 
-                        Neon Glassmorphism theme. Features smooth scrolling, contact form integration 
-                        (Web3Forms), and modern CSS animations.
-                    </p>
-                    
-                    <div style="margin-top: 15px;">
-                        <a href="https://github.com/Prathmesh-ally/My-Portfolio.git" target="_blank" class="btn-view">
-                            View Source Code <i class="fa-solid fa-arrow-right"></i>
-                        </a>
+            <h2 data-aos="fade-up">Projects</h2>    
+            <div class="swiper mySwiper" data-aos="zoom-in-up">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="project-card">
+                            <h3>Corporate Management System</h3>
+                            <p class="tech-stack"><strong>Tech Stack:</strong> C#, ASP.NET Web Forms, MS SQL Server, Bootstrap 5</p>
+                            <p class="project-desc">
+                                Enterprise web app developed during my internship at Zeel Network Solutions.<br><br>
+                                • Features: Secure Auth, CRUD operations via ADO.NET, and reporting using complex SQL Joins.<br>
+                                • UI: Responsive design with Master Pages.
+                            </p>
+                            <div style="margin-top: 15px;">
+                                <a href="https://github.com/Prathmesh-ally/Corporate-Management-System.git" target="_blank" class="btn-view">View Code <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
+                    <div class="swiper-slide">
+                        <div class="project-card">
+                            <h3>Personal Portfolio Website</h3>
+                            <p class="tech-stack">HTML • CSS • JavaScript</p>
+                            <p class="project-desc">Designed and developed this fully responsive personal portfolio with a Neon Glassmorphism theme. 
+                                Features smooth scrolling, contact form integration (Web3Forms), and modern CSS animations.</p>
+                            <div style="margin-top: 15px;">
+                                <a href="https://github.com/Prathmesh-ally/My-Portfolio.git" target="_blank" class="btn-view">View Source Code <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="project-card">
+                            <h3>Spotify Web Clone</h3>
+                            <p class="tech-stack">HTML5 • CSS3 • Bootstrap</p>
+                            <p class="project-desc">Designed a responsive replica of the Spotify web interface using HTML5 and CSS3. 
+                                Utilized Bootstrap frameworks to ensure a consistent and mobile-friendly layout across different devices.</p>
+                            <div style="margin-top: 15px;">
+                                <a href="https://github.com/Prathmesh-ally/Spotify-clone-Using-Pure-CSS-.git" target="_blank" class="btn-view">View Code <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="project-card">
+                            <h3>Premier Schools Exhibition</h3>
+                            <p class="tech-stack">HTML5 • CSS3 • Flexbox • Grid</p>
+                            <p class="project-desc">Developed a fully responsive event landing page using semantic HTML5 and custom CSS3. 
+                                Implemented high-performance, CSS-only infinite scroll animations for dynamic image galleries.</p>
+                            <div style="margin-top: 15px;">
+                                <a href="https://github.com/Prathmesh-ally/Assignment-By-SRV-MEDIA-.git" target="_blank" class="btn-view">View Code <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
                 
-                <div class="project-card">
-                    <h3>Spotify Web Clone</h3>
-                    <p class="tech-stack"><strong>Tech Stack:</strong> HTML5, CSS3, Bootstrap</p>
-                    <p class="project-desc">
-                        Designed a responsive replica of the Spotify web interface using HTML5 and CSS3. 
-                        Utilized Bootstrap frameworks to ensure a consistent and mobile-friendly layout across different devices. 
-                        The project focuses on clean UI design to mimic the professional look of the original platform.
-                    </p>
-                    <a href="https://github.com/Prathmesh-ally/Spotify-clone-Using-Pure-CSS-.git" class="btn-view">View Code <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-
-                <div class="project-card">
-                    <h3>Premier Schools Exhibition Landing Page</h3>
-                    <p class="tech-stack"><strong>Tech Stack:</strong> HTML5, CSS3, Flexbox, Grid</p>
-                    <p class="project-desc">
-                        Developed a fully responsive event landing page using semantic HTML5 and custom CSS3. 
-                        Implemented high-performance, CSS-only infinite scroll animations for dynamic image galleries. 
-                        Designed a modern user interface featuring glassmorphism effects.
-                    </p>
-                    <a href="https://github.com/Prathmesh-ally/Assignment-By-SRV-MEDIA-.git" class="btn-view">View Code <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-
+                <div class="swiper-pagination"></div>
             </div>
         </div>
 
+
+
         <div class="contact-section" id="Contact">
             <h2>Get In Touch</h2>
-            <div class="form-container">
+            <div class="form-container" data-aos="flip-up">
                 <form action="https://api.web3forms.com/submit" method="POST">
 
                     <input type="hidden" name="access_key" value="6205a65d-b7c1-4789-9490-1d8aaea57faa">
@@ -187,7 +213,8 @@
     </div>
 
         <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script>
             var typed = new Typed(".auto-type", {
                 strings: [
@@ -199,6 +226,75 @@
                 typeSpeed: 100,
                 backSpeed: 60,   
                 loop: true       
+            });
+
+            AOS.init({
+                duration: 1000,
+                once: true,
+                offset: 100
+            });
+
+        var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                grabCursor: true,
+                speed: 3000,
+                autoplay: {
+                    delay: 0,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                },
+                breakpoints: {
+                    768: {
+                        slidesPerView: 2,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                    },
+                },
+            });
+
+        document.addEventListener("DOMContentLoaded", function () {
+                const lines = [
+                    "> Booting core system...",
+                    "> Initializing web-modules...",
+                    "> Loading Prathmesh.exe...",
+                    "> Establishing MERN stack pathways...",
+                    "> Status: SECURE.",
+                    "> Access Granted. Launching Portfolio..."
+                ];
+
+                const container = document.getElementById("preloader-text");
+                let currentLine = 0;
+
+                function typeTerminal() {
+                    if (currentLine < lines.length) {
+                        let p = document.createElement("p");
+                        p.className = "terminal-line";
+                        p.innerText = lines[currentLine];
+                        container.appendChild(p);
+                        currentLine++;
+                        setTimeout(typeTerminal, 450); 
+                    } else {
+                        setTimeout(function () {
+                            const preloader = document.getElementById("preloader");
+                            preloader.style.opacity = "0";
+                            preloader.style.visibility = "hidden";
+                        }, 600);
+                    }
+                }
+
+                typeTerminal();
+            });
+
+        window.addEventListener('scroll', function() {
+                let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+                let scrolled = (winScroll / height) * 100;
+                
+                document.getElementById("scrollBar").style.width = scrolled + "%";
             });
         </script>
 
