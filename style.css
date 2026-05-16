@@ -305,7 +305,9 @@ a {
     transition: 0.3s;
 }
 .project-card:hover {
-    transform: translateY(-10px);
+    /* transform: translateY(-10px); */
+    background: rgba(30, 30, 30, 0.8);
+    border-color: #00f260;
     background: rgba(30, 30, 30, 0.8);
     border-color: #00f260;
 }
@@ -444,8 +446,6 @@ form textarea:focus {
     }
 
 }
-
-
 .experience-section {
     margin-bottom: 80px;
     padding: 0 20px;
@@ -490,7 +490,10 @@ form textarea:focus {
     transition: 0.3s;
 }
 .timeline-content:hover {
-    transform: translateY(-5px);
+    /* transform: translateY(-5px); */
+    border-color: #00f260;
+    background: rgba(30, 30, 30, 0.8);
+    box-shadow: 0 0 20px rgba(0, 242, 96, 0.15);
     border-color: #00f260;
     background: rgba(30, 30, 30, 0.8);
     box-shadow: 0 0 20px rgba(0, 242, 96, 0.15);
@@ -603,4 +606,16 @@ form textarea:focus {
     box-shadow: 0 0 10px #00f260, 0 0 20px #00f260;
     z-index: 99999999;
     transition: width 0.1s ease;
+}
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0; 
+}
+.main-container {
+    position: relative;
+    z-index: 1; 
 }

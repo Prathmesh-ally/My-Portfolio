@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <link rel="icon" href="./assets/Logo.png">
@@ -31,6 +32,7 @@
             </div>
         </div>
         <div class="scroll-progress-bar" id="scrollBar"></div>
+        <div id="particles-js"></div>
         <nav class="navbar">
             <div class="logo">~$ <span class="neon-text">Prathmesh</span><span class="blink-cursor">_</span></div>
             
@@ -215,6 +217,8 @@
         <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
         <script>
             var typed = new Typed(".auto-type", {
                 strings: [
@@ -234,7 +238,7 @@
                 offset: 100
             });
 
-        var swiper = new Swiper(".mySwiper", {
+            var swiper = new Swiper(".mySwiper", {
                 slidesPerView: 1,
                 spaceBetween: 30,
                 loop: true,
@@ -255,7 +259,7 @@
                 },
             });
 
-        document.addEventListener("DOMContentLoaded", function () {
+            document.addEventListener("DOMContentLoaded", function () {
                 const lines = [
                     "> Booting core system...",
                     "> Initializing web-modules...",
@@ -288,13 +292,60 @@
                 typeTerminal();
             });
 
-        window.addEventListener('scroll', function() {
+            window.addEventListener('scroll', function() {
                 let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
                 let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 
                 let scrolled = (winScroll / height) * 100;
                 
                 document.getElementById("scrollBar").style.width = scrolled + "%";
+            });
+
+            particlesJS("particles-js", {
+                "particles": {
+                    "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
+                    "color": { "value": "#00f260" }, // Neon Green Dots
+                    "shape": { "type": "circle" },
+                    "opacity": { "value": 0.5, "random": false },
+                    "size": { "value": 3, "random": true },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#00f260", // Neon Green Lines
+                        "opacity": 0.4,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 2, // Udne ki speed
+                        "direction": "none",
+                        "random": false,
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": false
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": { "enable": true, "mode": "grab" }, 
+                        "onclick": { "enable": true, "mode": "push" }, 
+                        "resize": true
+                    },
+                    "modes": {
+                        "grab": { "distance": 140, "line_linked": { "opacity": 1 } },
+                        "push": { "particles_nb": 4 }
+                    }
+                },
+                "retina_detect": true
+            });
+
+            VanillaTilt.init(document.querySelectorAll(".project-card, .timeline-content"), {
+                max: 15,          
+                speed: 400,     
+                glare: true,      
+                "max-glare": 0.2, 
+                scale: 1.02       
             });
         </script>
 
